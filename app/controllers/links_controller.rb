@@ -1,7 +1,8 @@
 class LinksController < ApplicationController
+  before_action :authenticate_user!
 
   def index
-    @links = Link.all
+    @links = Link.where(user_id: current_user.id)
   end
 
   def new
@@ -23,6 +24,11 @@ class LinksController < ApplicationController
 
   def show
     @link = Link.find(params[:id])
+
+    unless current_user.id == @link.user_id
+      redirect_to '/'
+    end
+
   end
 
   def edit

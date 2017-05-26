@@ -1,0 +1,29 @@
+body {
+  background-image: url("hip-square.png")
+}
+
+h1 {
+  color: black;
+  font-size: 50px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.content td {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.content th {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.well {
+  padding: 10px;
+}

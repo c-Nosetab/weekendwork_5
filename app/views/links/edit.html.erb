@@ -1,23 +1,22 @@
-<h1>Edit link:</h1>
 
-<%= form_tag "/links/#{@link.id}", method: :patch do %>
+<div class="well content">
+  <h1>Edit link:</h1>
 
-  <div>
-    <%= label_tag :slug %>
-    <%= text_field_tag :slug, @link.slug %>
-  </div>
-  <div>
-    <%= label_tag :target_url %>
-    <%= text_field_tag :target_url, @link.target_url%>
-  </div>
-  <%= submit_tag "Edit Link", class: "btn btn-primary"%>
+<h2>
+  <%= form_tag "/links/#{@link.id}", method: :patch do %>
 
-  <!-- <div>
-    <h2>Slug:  <input type="text" name="slug" value="<!%= @link.slug %>"></h2>
-  </div>
-  <div>
-    <h2>Target URL:  <input type="text" name="target_url" value="<!%= @link.target_url %>"></h2>
-  </div> -->
+    <div>
+      <%= label_tag :slug %>
+      <%= text_field_tag :slug, @link.slug %>
+    </div>
+    <div>
+      <%= label_tag :target_url %>
+      <%= text_field_tag :target_url, @link.target_url%>
+    </div>
+    <%= submit_tag "Edit Link", class: "btn btn-primary"%>
 
 
-<% end %>
+
+  <% end %>
+  </h2>
+</div>

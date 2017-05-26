@@ -1,19 +1,21 @@
-<h1>Your links</h1>
 
-<table>
-  <tr>
-    <th>Slug</th>
-    <th>Target URL</th>
-    <th>Created At</th>
-  </tr>
-  <% @links.each do |link| %>
-
+<div class="content well">
+  <h1>Your links</h1>
+  <table>
     <tr>
-      <td><%= link.slug %></a></td>
-      <td><%= link.target_url %></td>
-      <td><%= link.created_at %></td>
-      <td><a class="btn btn-primary" href="/links/<%= link.id %>">View</a></td>
-      <td><a href="/<%= link.slug %>" class="btn btn-success">Test</a></td>
+      <th>Slug</th>
+      <th>Target URL</th>
+      <th>Created At</th>
     </tr>
-  <% end %>
-<table>
+    <% @links.each do |link| %>
+
+      <tr>
+        <td><%= link.slug %></a></td>
+        <td><%= link.target_url %></td>
+        <td><%= link.created_at %></td>
+        <td><a class="btn btn-primary" href="/links/<%= link.id %>">View</a></td>
+        <td><a href="/<%= link.slug %>" class="btn btn-success">Test</a></td>
+      </tr>
+    <% end %>
+  <table>
+</div>
