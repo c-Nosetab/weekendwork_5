@@ -1,0 +1,15 @@
+
+
+  <div>
+    <h2>Slug:  <%= @link.slug %></h2>
+  </div>
+  <div>
+    <h2>Target URL:  <%= @link.target_url %></h2>
+  </div>
+
+
+  <a href="/links/<%= @link.id%>/edit" class="btn btn-primary">Edit</a>
+
+  <%= link_to "/links/#{@link.id}", method: :delete do %>
+    <button class="btn btn-danger">Delete</button>
+  <% end %>

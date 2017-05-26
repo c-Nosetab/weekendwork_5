@@ -1,0 +1,28 @@
+<h1>Create New link!</h1>
+
+<% if @link.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@link.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+    <ul>
+    <% @link.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+<%= form_tag '/links', method: :post do %>
+
+   <input type="hidden" name="user_id" value=<%= current_user.id %>>
+  <div>
+    <h3>Slug: <input type="text" name="slug"></h3>
+  </div>
+  <div>
+    <h3>Target URL: <input type="text" name="target_url"></h3>
+  </div>
+
+  <input type="submit" value="Submit">
+
+<% end %>
